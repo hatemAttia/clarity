@@ -1,0 +1,91 @@
+<link rel="stylesheet" href="https://unpkg.com/@clr/ui/clr-ui.min.css" />
+
+<div class="main-container">
+    <header class="header-3">
+        <div class="branding">
+            <a href="..." class="nav-link">
+                <div style="height: 30px;width: 30px; background-image: url(/assets/lili.png);background-size: contain;background-position: center;background-repeat: no-repeat;margin-right: 10px;"></div>
+                <span class="title">Clarité</span>
+            </a>
+        </div>
+        <div class="header-actions">
+            <clr-dropdown>
+                <button class="nav-icon" clrDropdownTrigger aria-label="toggle settings menu">
+                    <clr-icon shape="cog"></clr-icon>
+                    <clr-icon shape="caret down"></clr-icon>
+                </button>
+                <clr-dropdown-menu *clrIfOpen clrPosition="bottom-right">
+                    <a href="..." clrDropdownItem>A propos</a>
+                    <a href="..." clrDropdownItem>Preferences</a>
+                    <a href="..." clrDropdownItem>Déconnecter</a>
+                </clr-dropdown-menu>
+            </clr-dropdown>
+        </div>
+    </header>
+    <div class="content-container">
+        <clr-vertical-nav [clrVerticalNavCollapsible]="true" [(clrVerticalNavCollapsed)]="collapsed">
+            <a clrVerticalNavLink routerLink="#prinsip" routerLinkActive="active">
+                <clr-icon clrVerticalNavIcon shape="user"></clr-icon>
+                Vos demandes
+            </a>
+            
+            <a clrVerticalNavLink routerLink="#prinsip" routerLinkActive="active">
+                <clr-icon clrVerticalNavIcon shape="shield"></clr-icon>
+                Sécurité
+            </a>
+            <a clrVerticalNavLink routerLink="#prinsip" routerLinkActive="active">
+                <clr-icon clrVerticalNavIcon shape="certificate"></clr-icon>
+                Credit
+            </a>
+        </clr-vertical-nav>
+        <div class="content-area">
+            <div class="clr-row" >
+
+                <div class="clr-col-lg-6 clr-col-12" >
+                    <h1 id="prinsip">Vue principal</h1>
+                    <a href="..." class="card clickable" style="width: 75vw;">
+                        
+                        <div class="card-img" style="word-wrap: break-word;" >
+                                <h3 style="padding-left: 10px;"> Demande 1</h3>
+                            <ul class="clr-timeline clr-timeline-horizontal" id="crd" style="width: 100% ;word-wrap: break-word; transform: scale(0.75);overflow-y: hidden;">
+                             
+                                <li class="clr-timeline-step disabled">
+                                    <div class="clr-timeline-step-header">11:59 am</div>
+                                    <clr-icon shape="dot-circle" aria-label="Not started"></clr-icon>
+                                    <div class="clr-timeline-step-body">
+                                        <span class="clr-timeline-step-title">Placement</span>
+                                        <span class="clr-timeline-step-description">Placement de demande de cetif</span>
+                                    </div>
+                                </li>
+                                <li class="clr-timeline-step">
+                                    <div class="clr-timeline-step-header">4:39 pm</div>
+                                    <clr-icon shape="dot-circle" aria-current="true" aria-label="Current"></clr-icon>
+                                    <div class="clr-timeline-step-body">
+                                        <span class="clr-timeline-step-title">Passage au bureau </span>
+                                        <span class="clr-timeline-step-description">
+                                           Passage de demande au bureau de responsable
+                                            
+                                        </span>
+                                    </div>
+                                </li>
+                                <li class="clr-timeline-step">
+                                    <div class="clr-timeline-step-header">5:59 pm</div>
+                                    <clr-spinner clrMedium aria-label="In progress"></clr-spinner>
+                                    <div class="clr-timeline-step-body" >
+                                        <span class="clr-timeline-step-title">confirmation</span>
+                                        <span class="clr-timeline-step-description">
+                                                confirmation  et verification des erreurs au bureau administratif
+                                            <button class="btn btn-sm">detail</button>
+                                        </span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <router-outlet></router-outlet>
+        </div>
+
+    </div>
+</div>
